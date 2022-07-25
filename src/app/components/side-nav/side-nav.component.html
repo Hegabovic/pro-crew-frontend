@@ -5,7 +5,7 @@
         <!--        <img alt="logo" src="assets/login/company_logo.png" class="img-fluid"/>-->
       </section>
       <section id="sidenav-buttons" class="w-100 p-2">
-        <button routerLink="/users" [routerLinkActiveOptions]="{ exact: true }"
+        <button *ngIf="userRole==='admin'" routerLink="/users" [routerLinkActiveOptions]="{ exact: true }"
                 routerLinkActive="nav-button-active mat-elevation-z3"
                 mat-button mat-raised-button
                 class="w-100 mb-3 nav-buttons mat-elevation-z0">

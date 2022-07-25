@@ -10,6 +10,7 @@ import {of} from "rxjs";
 export class UsersServicesService {
   login_url: string = urls.login_url;
   register_url: string = urls.register_url;
+  logout_url:string = urls.logout_url;
 
   constructor(private http: HttpClient) {
   }
@@ -19,9 +20,11 @@ export class UsersServicesService {
   }
 
   register(registerData: any) {
-    const headers = { 'content-type': 'application/json'}
+    return this.http.post<any>(this.register_url,registerData)
+  }
 
-    return this.http.post<any>(this.register_url,registerData,{headers:headers})
+  logout(logout: any) {
+    return this.http.post<any>(this.logout_url,logout)
   }
 
 
@@ -33,5 +36,6 @@ export class UsersServicesService {
   loggedIn(){
     return of(!! localStorage.getItem('token'))
   }
+
 
 }

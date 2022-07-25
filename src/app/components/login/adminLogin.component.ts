@@ -47,17 +47,17 @@ export class AdminLoginComponent implements OnInit {
         console.log(response)
         localStorage.setItem("username", response.username);
         localStorage.setItem("token", response.token);
-        // localStorage.setItem("roles", response.roles);
-        // localStorage.setItem("userPermissions", response.userPermissions);
+        localStorage.setItem("userType", response.role);
+
         // localStorage.setItem("profile_image", response.profile_image);
-        window.location.href = "/";
+        window.location.href = "/dashboard";
       } else {
         sessionStorage.setItem("username", response.username);
         sessionStorage.setItem("token", response.token);
-        // sessionStorage.setItem("roles", response.roles);
+        sessionStorage.setItem("userType", response.role);
         // sessionStorage.setItem("userPermissions", response.userPermissions);
         // sessionStorage.setItem("profile_image", response.profile_image);
-        window.location.href = "/";
+        window.location.href = "/dashboard";
       }
     },(response)=>{
       alert(response.error.message)

@@ -9,6 +9,7 @@ export const environment = {
 export const urls = {
   register_url:'http://localhost:3333/register',
   login_url: 'http://localhost:3333/login',
+  logout_url: 'http://localhost:3333/logout',
   resetPassword_url: 'http://localhost:3333/email/reset-password',
   confirmPassword_url: 'http://localhost:3333/email/confirm-password-change',
 }

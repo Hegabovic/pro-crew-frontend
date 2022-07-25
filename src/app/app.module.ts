@@ -9,13 +9,23 @@ import {MaterialModule} from "../material/material.module";
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
+import {RegisterComponent} from "./components/register/register.component";
+import {AdminLoginComponent} from "./components/login/adminLogin.component";
+import {ForgetPasswordComponent} from "./components/forgetPassword/forgetPassword.component";
+import {ChangePasswordComponent} from "./components/changePassword/changePassword.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SideNavComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent,
+    AdminLoginComponent,
+    ForgetPasswordComponent,
+    ChangePasswordComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/*!* You can add global styles to this file, and also import other style files *!*/
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.gray {
+  color: #5b4c3d;
+}
+
+.green {
+  color: #5b4c3d;
+}
+
+.mat-form-field-underline,
+.mat-form-field-ripple {
+  display: none;
+}

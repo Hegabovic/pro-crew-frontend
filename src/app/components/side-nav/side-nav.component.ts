@@ -8,10 +8,11 @@ import {UsersServicesService} from "../../../services/users/users-services.servi
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent implements OnInit {
-
+  token = {
+    token:localStorage.getItem('token') ||sessionStorage.getItem('token') || ""
+  }
   username:string = "";
   data: any = {}
-  // opened: boolean = false;
   isLoggedIn = false;
   profileOptions: any = ["Admin", "Logout"];
   filteredOptions: any;
@@ -19,9 +20,7 @@ export class SideNavComponent implements OnInit {
   activeLink = ""
   profilePicture:string="";
 
-  // private authService: AuthService,
-  // private usersServicesService: UsersServicesService
-  constructor(private router: Router, private activatedRoute: ActivatedRoute,private authService :UsersServicesService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,private usersServicesService :UsersServicesService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.activeLink = event.url
@@ -32,21 +31,20 @@ export class SideNavComponent implements OnInit {
   ngOnInit(): void {
     this.username = localStorage.getItem('name') || sessionStorage.getItem('name') || ''
     this.profilePicture = localStorage.getItem('profile_image') || sessionStorage.getItem('profile_image') || ''
+    this.userRole = localStorage.getItem("userType")?.toString() || sessionStorage.getItem("userType")?.toString() || "";
 
-    // this.userRole = localStorage.getItem("roles")?.toString() || sessionStorage.getItem("roles")?.toString() || "";
-    this.authService.loggedIn().subscribe((data) => {
+    this.usersServicesService.loggedIn().subscribe((data) => {
       console.log(data)
       this.isLoggedIn = data
     })
   }
 
   onLogoutCLicked() {
-    this.data = {}
-    // this.usersServicesService.logout(this.data).subscribe((response) => {
-    //   sessionStorage.clear();
-    //   localStorage.clear();
-    //   window.location.href = "/login"
-    // })
+    this.data = localStorage.getItem('token') ||sessionStorage.getItem('token') || ""
+    this.usersServicesService.logout(this.data).subscribe((response) => {
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "/login"
+    })
   }
-
 }
