@@ -1,0 +1,56 @@
+<div class=container>
+<!--  <div class="card">-->
+  <div class="card register-card">
+    <div class="register-left-card"></div>
+    <div style="padding-left:25px ;width:350px">
+      <h2 class="register-title">Account Management System</h2>
+      <form [formGroup]="myForm" #localForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+          <div>
+            <div class="flex flex-column handle-input-field">
+              <!--    Name field    -->
+              <label class="gray">Name</label>
+              <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+                <mat-icon matPrefix class="green">person_outline</mat-icon>
+                <input class="gray" matInput aria-required="false" name="name" formControlName="name">
+              </mat-form-field>
+
+              <!--    Email field    -->
+              <label class="gray">E-Mail</label>
+              <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+                <mat-icon matPrefix class="green">mail_outline</mat-icon>
+                <input class="gray" matInput aria-required="false" name="email" formControlName="email">
+              </mat-form-field>
+
+              <!--    Password field    -->
+              <div class="flex-column handle-input-field">
+                <label class="gray">Password</label>
+                <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+                  <mat-icon matPrefix class="green">lock</mat-icon>
+                  <input class="gray" type="password" matInput aria-required="false" name="password"
+                         formControlName="password">
+                </mat-form-field>
+              </div>
+              <!--    Confirm Password field    -->
+              <div class="flex-column handle-input-field">
+                <label class="gray">Confirm Password</label>
+                <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+                  <mat-icon matPrefix class="green">lock</mat-icon>
+                  <input class="gray" type="password" matInput aria-required="false" name="confirmPassword"
+                         formControlName="confirmPassword">
+                </mat-form-field>
+              </div>
+
+              <button mat-button class="btn-meetdoc-sccuess-login" type="submit" [disabled]="myForm.invalid">Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div>
+  <p class="meetdoc-copyright">&copy; 2022 Account Management System, All Rights Reserved . Designed & Developed by
+    Abdullah Hegab</p>
+</div>

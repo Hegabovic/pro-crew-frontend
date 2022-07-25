@@ -1,0 +1,170 @@
+::ng-deep .handle-input-field .mat-form-field-outline-start {
+  border-radius: 28px 0 0 28px !important;
+  min-width: 28px !important;
+}
+
+::ng-deep .handle-input-field .mat-form-field-outline-end {
+  border-radius: 0 28px 28px 0 !important;
+
+}
+
+::ng-deep .handle-input-field input.mat-input-element {
+  border-left-color: #5b4c3d;
+  border-left-style: solid;
+  border-left-width: 1px;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  color:#5b4c3d;
+}
+
+::ng-deep .p-5 {
+  padding: 0 !important;
+}
+
+#company_logo {
+  width: 200px;
+  height: 200px;
+}
+
+.container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 940px;
+  height: 680px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*background-image: url("src/assets/login_assets/login_mask_background.png");*/
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-meetdoc-sccuess-login {
+  background-color: #5b4c3d;
+  border-radius: 29px;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.meetdoc-copyright {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #545454;
+}
+
+.login-rememberMe-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #5b4c3d;
+}
+
+.login-rememberMe-input {
+  display: none;
+}
+
+.login-rememberMe-dimensions {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #5b4c3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.login-rememberMe-dimensions::after {
+  content: '\2714';
+  background-color: #5b4c3d;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+.login-rememberMe-input:checked + .login-rememberMe-dimensions {
+  background-color: #5b4c3d;
+  border-color: #5b4c3d;
+}
+
+.login-rememberMe-input:checked + .login-rememberMe-dimensions::after {
+  transform: scale(.6);
+}
+
+.login-forgetPassword {
+  margin-left: 80px;
+  text-decoration: none;
+  color: #5b4c3d;
+  cursor: pointer;
+
+}
+
+
+.login-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("src/assets/shared/background.jpg");
+}
+
+.login-left-card {
+  width: 90%;
+  height: 100%;
+  background-image: url("src/assets/register/register-unsplash.jpg");
+  background-size: cover;
+}
+
+.login-right-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-title{
+  color: #5b4c3d;
+  font-weight: bold;
+  text-space: 3px;
+}
+
+.login-to-register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  color: #5b4c3d;
+}
+
+.to-register-link{
+  font-weight: bold;
+  text-decoration: underline;
+  color: #5b4c3d;
+  cursor: pointer;
+}
+
+.login-github{
+  color:black;
+  font-weight: bold;
+  width: 200px;
+}
+.social-media-login{
+  color: #5b4c3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

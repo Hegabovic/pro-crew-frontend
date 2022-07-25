@@ -1,0 +1,56 @@
+<div class=container>
+  <div class="card login-card">
+    <div class="login-left-card"></div>
+    <div class="login-right-card" style="width:380px">
+      <h2 class="login-title">Account Management System</h2>
+      <div class="login-logo">
+        <img id="company_logo" src="assets/login/company_logo.png" alt="company_logo">
+      </div>
+      <form [formGroup]="myForm" #localForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+          <!--    Username field    -->
+          <div class="flex-column handle-input-field">
+            <label class="gray">E-Mail</label>
+            <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+              <mat-icon matPrefix class="green">mail_outline</mat-icon>
+              <input class="gray" matInput aria-required="false" name="email" formControlName="email">
+            </mat-form-field>
+
+
+            <!--    Password field    -->
+            <div class="flex-column handle-input-field">
+              <label class="gray">Password</label>
+              <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+                <mat-icon matPrefix class="green">lock</mat-icon>
+                <input class="gray" type="password" matInput aria-required="false" name="password"
+                       formControlName="password">
+              </mat-form-field>
+            </div>
+            <!-- remember me and forget password -->
+            <!--   remember me   -->
+            <div class="flex-row">
+              <div style="padding-bottom: 20px">
+                <label class="login-rememberMe-label" for="rememberme">
+                  <input type="checkbox" class="login-rememberMe-input" name="checkbocname" id="rememberme" formControlName="rememberme">
+                  <div class="login-rememberMe-dimensions"></div>
+                  Remember me
+                </label>
+              </div>
+              <!--    forget password   -->
+              <div>
+                <a (click)="onForgetPassword()" class="login-forgetPassword">Forgot Password?</a>
+              </div>
+            </div>
+            <button mat-button class="btn-meetdoc-sccuess-login" type="submit" [disabled]="myForm.invalid">login
+            </button>
+            <p class="login-to-register"> Don't have an account ?<span>&nbsp;&nbsp;</span> <a class="to-register-link" (click)="onCreateAccount()"> Create one now.</a></p>
+            <p class="social-media-login"><span style="font-weight: bold">OR</span>&nbsp; Login with <span>&nbsp;&nbsp;</span> <span class="to-register-link">Github Account</span></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div>
+  <p class="meetdoc-copyright">&copy; 2022 Account Management System, All Rights Reserved . Designed & Developed by Abdullah Hegab</p>
+</div>
