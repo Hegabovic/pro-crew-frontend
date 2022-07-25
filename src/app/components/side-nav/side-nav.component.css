@@ -62,11 +62,15 @@ mat-sidenav {
 .profile-picture-placeholder {
   display: flex !important;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   padding: 2px;
   color: white;
   font-size: 1.7rem;
   background-color: #707070;
   width: 40px;
   height: 40px;
+}
+
+ng::ng-deep .mat-toolbar-row, .mat-toolbar-single-row{
+  justify-content: space-between;
 }

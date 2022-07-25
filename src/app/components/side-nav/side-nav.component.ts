@@ -30,7 +30,7 @@ export class SideNavComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.email = localStorage.getItem('name') || sessionStorage.getItem('name') || ''
+    this.username = localStorage.getItem('name') || sessionStorage.getItem('name') || ''
     this.profilePicture = localStorage.getItem('profile_image') || sessionStorage.getItem('profile_image') || ''
 
     // this.userRole = localStorage.getItem("roles")?.toString() || sessionStorage.getItem("roles")?.toString() || "";
