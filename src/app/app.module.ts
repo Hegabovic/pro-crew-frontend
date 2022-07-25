@@ -8,6 +8,7 @@ import {SideNavComponent} from "./components/side-nav/side-nav.component";
 import {MaterialModule} from "../material/material.module";
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule,
 
   ],
   providers: [],
