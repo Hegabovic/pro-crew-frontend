@@ -11,6 +11,7 @@ export class UsersServicesService {
   login_url: string = urls.login_url;
   register_url: string = urls.register_url;
   logout_url:string = urls.logout_url;
+  users_url:string = urls.users_url;
 
   constructor(private http: HttpClient) {
   }
@@ -28,13 +29,17 @@ export class UsersServicesService {
   }
 
 
+  users() {
+    return this.http.get<any>(this.users_url)
+  }
+
   /**
    * @author Abdullah Hegab
    * @description to check if the token exist in the browser or not
    * @return boolean
    */
   loggedIn(){
-    return of(!! localStorage.getItem('token'))
+    return of(!! localStorage.getItem('token') || !! sessionStorage.getItem('token'))
   }
 
 

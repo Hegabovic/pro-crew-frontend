@@ -18,13 +18,13 @@ mat-sidenav {
 
 #sidenav-buttons .nav-button-active {
   border-radius: 20px;
-  color: #7CBD42;
-  border-color: #7CBD42;
+  color: #5b4c3d;;
+  border-color: #5b4c3d;;
 }
 
 
 .btn-icon {
-  color: #7CBD42;
+  color: #5b4c3d;;
 }
 
 .mat-drawer-content {

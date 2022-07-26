@@ -14,6 +14,7 @@ import {AdminLoginComponent} from "./components/login/adminLogin.component";
 import {ForgetPasswordComponent} from "./components/forgetPassword/forgetPassword.component";
 import {ChangePasswordComponent} from "./components/changePassword/changePassword.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {NotFoundComponent} from "./components/not-found/not-found.component";
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatTableModule,
 
   ],
   providers: [],

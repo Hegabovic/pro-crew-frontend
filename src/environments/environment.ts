@@ -12,6 +12,7 @@ export const urls = {
   logout_url: 'http://localhost:3333/logout',
   resetPassword_url: 'http://localhost:3333/email/reset-password',
   confirmPassword_url: 'http://localhost:3333/email/confirm-password-change',
+  users_url:'http://localhost:3333/users',
 }
 
 /*

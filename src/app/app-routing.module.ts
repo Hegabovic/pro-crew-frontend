@@ -23,7 +23,7 @@ const routes: Routes = [
     component: ForgetPasswordComponent
   },
   {
-    path: "dashboard",
+    path: "users",
     component: DashboardComponent,
     canActivate:[AuthGuard]
   },
