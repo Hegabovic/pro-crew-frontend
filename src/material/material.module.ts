@@ -13,6 +13,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 
 
 
@@ -34,6 +35,7 @@ const MaterialComponents = [
   MatNativeDateModule,
   MatPaginatorModule,
   ReactiveFormsModule,
+  MatDialogModule
 
 ]
 

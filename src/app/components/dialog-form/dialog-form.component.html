@@ -1,0 +1,25 @@
+<div class="container global-form" style="width: 496px;">
+  <mat-toolbar></mat-toolbar>
+
+  <form [formGroup]="myForm" #localForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <!--    Username field    -->
+      <div class="flex-column handle-input-field">
+        <label class="gray">username</label>
+        <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+          <mat-icon matPrefix class="green">person</mat-icon>
+          <input class="gray" matInput aria-required="false" name="username" formControlName="username">
+        </mat-form-field>
+
+        <label class="gray">E-Mail</label>
+        <mat-form-field class="inputField-full-width" appearance="outline" color="primary">
+          <mat-icon matPrefix class="green">mail_outline</mat-icon>
+          <input class="gray" matInput aria-required="false" name="email" formControlName="email">
+        </mat-form-field>
+<!--        -->
+        <button mat-button class="btn-meetdoc-sccuess-login" type="submit" [disabled]="myForm.invalid" >confirm edit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

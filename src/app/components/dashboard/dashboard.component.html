@@ -47,10 +47,10 @@
             <mat-icon matPrefix class="btn-icons-dataTable">remove_red_eye</mat-icon>
           </button>
           <button class="btn-no-style">
-            <mat-icon matPrefix class="btn-icons-dataTable">edit</mat-icon>
+            <mat-icon matPrefix class="btn-icons-dataTable" (click)="onEdit(element)">edit</mat-icon>
           </button>
           <button class="btn-no-style">
-            <mat-icon matPrefix class="btn-icons-dataTable">delete</mat-icon>
+            <mat-icon matPrefix class="btn-icons-dataTable" (click)="onDelete(element)">delete</mat-icon>
           </button>
         </td>
       </ng-container>
@@ -59,7 +59,7 @@
     </table>
     <!-- End of DataTable -->
     <mat-paginator class=" mat-elevation-z7" #paginator
-                   [pageSize]="2"
+                   [pageSize]="10"
     >
     </mat-paginator>
   </div>

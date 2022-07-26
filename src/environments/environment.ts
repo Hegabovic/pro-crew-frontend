@@ -7,14 +7,16 @@ export const environment = {
 };
 
 export const urls = {
-  register_url:'http://localhost:3333/register',
+  register_url: 'http://localhost:3333/register',
   login_url: 'http://localhost:3333/login',
   logout_url: 'http://localhost:3333/logout',
   resetPassword_url: 'http://localhost:3333/email/reset-password',
   confirmPassword_url: 'http://localhost:3333/email/confirm-password-change',
-  users_url:'http://localhost:3333/users',
+  users_url: 'http://localhost:3333/users',
+  deleteUser_url: 'http://localhost:3333/users/{id}',
+  showUser_url : 'http://localhost:3333/users/{id}',
+  editUser_url : 'http://localhost:3333/users/{id}',
 }
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

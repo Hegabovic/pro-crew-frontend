@@ -1,0 +1,68 @@
+.fill-remaining-space{
+  flex:1 1 auto;
+}
+
+::ng-deep .handle-input-field .mat-form-field-outline-start {
+  border-radius: 28px 0 0 28px !important;
+  min-width: 28px !important;
+}
+
+::ng-deep .handle-input-field .mat-form-field-outline-end {
+  border-radius: 0 28px 28px 0 !important;
+
+}
+
+::ng-deep .handle-input-field input.mat-input-element {
+  border-left-color: #5b4c3d;
+  border-left-style: solid;
+  border-left-width: 1px;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  color:#5b4c3d;
+}
+
+::ng-deep .p-5 {
+  padding: 0 !important;
+}
+
+#company_logo {
+  width: 200px;
+  height: 200px;
+}
+
+.container {
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-meetdoc-sccuess-login {
+  background-color: #5b4c3d;
+  border-radius: 29px;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.login-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("src/assets/shared/background.jpg");
+}
+
+
+.global-form{
+  background-image: url("src/assets/shared/background.jpg");
+  background-position: center;
+  background-size: contain;
+}
+

@@ -12,6 +12,9 @@ export class UsersServicesService {
   register_url: string = urls.register_url;
   logout_url:string = urls.logout_url;
   users_url:string = urls.users_url;
+  deleteUser_url:string=urls.deleteUser_url;
+  showUser_url:string = urls.showUser_url;
+  editUser_url:string= urls.editUser_url;
 
   constructor(private http: HttpClient) {
   }
@@ -32,6 +35,27 @@ export class UsersServicesService {
   users() {
     return this.http.get<any>(this.users_url)
   }
+
+  user(id:number){
+    this.showUser_url = this.showUser_url.replace("{id}", id.toString())
+    return this.http.get<any>(this.showUser_url)
+  }
+
+  editUser(id:number,editedUser:any){
+    this.editUser_url = this.editUser_url.replace("{id}", id.toString())
+    console.log(editedUser)
+    console.log(id)
+    console.log(this.editUser_url)
+    return this.http.put<any>(this.editUser_url,editedUser)
+  }
+
+  delete(id:number){
+    this.deleteUser_url = this.deleteUser_url.replace("{id}", id.toString())
+
+    return this.http.delete<any>(this.deleteUser_url)
+  }
+
+
 
   /**
    * @author Abdullah Hegab
