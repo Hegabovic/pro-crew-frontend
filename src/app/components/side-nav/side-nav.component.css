@@ -62,7 +62,7 @@ mat-sidenav {
 .profile-picture-placeholder {
   display: flex !important;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   padding: 2px;
   color: white;
   font-size: 1.7rem;

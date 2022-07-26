@@ -11,10 +11,9 @@ export class SideNavComponent implements OnInit {
   token = {
     token:localStorage.getItem('token') ||sessionStorage.getItem('token') || ""
   }
-  username:string = "";
+  username:string ='';
   data: any = {}
   isLoggedIn = false;
-  profileOptions: any = ["Admin", "Logout"];
   filteredOptions: any;
   userRole: String = "";
   activeLink = ""
@@ -29,7 +28,7 @@ export class SideNavComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.username = localStorage.getItem('name') || sessionStorage.getItem('name') || ''
+    this.username = localStorage.getItem('username') || sessionStorage.getItem('username') || ''
     this.profilePicture = localStorage.getItem('profile_image') || sessionStorage.getItem('profile_image') || ''
     this.userRole = localStorage.getItem("userType")?.toString() || sessionStorage.getItem("userType")?.toString() || "";
 

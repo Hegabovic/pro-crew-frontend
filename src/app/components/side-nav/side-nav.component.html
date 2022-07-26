@@ -2,7 +2,7 @@
   <mat-sidenav #sidenav mode="side" class="mat-elevation-z3">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <section id="logo" class="m-4">
-        <!--        <img alt="logo" src="assets/login/company_logo.png" class="img-fluid"/>-->
+                <img alt="logo" src="assets/login/company_logo.png" style="width: 150px;height:150px" class="img-fluid"/>
       </section>
       <section id="sidenav-buttons" class="w-100 p-2">
         <button *ngIf="userRole==='admin'" routerLink="/users" [routerLinkActiveOptions]="{ exact: true }"
@@ -26,8 +26,10 @@
         </div>
         <div>
           <section class="d-flex flex-row">
+            <div *ngIf="this.profilePicture===''">
           <span
-            class="d-inline-block img-fluid rounded-circle text-center text-capitalize mt-auto profile-picture-placeholder">{{this.username}}</span>
+            class="d-inline-block img-fluid rounded-circle text-center text-capitalize mt-auto profile-picture-placeholder">{{this.username[0]}}</span>
+            </div>
             <button mat-button [matMenuTriggerFor]="menu"> {{ this.username }}
               <mat-icon>keyboard_arrow_down</mat-icon>
             </button>
