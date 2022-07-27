@@ -8,28 +8,38 @@ import {RegisterComponent} from "./components/register/register.component";
 import {ForgetPasswordComponent} from "./components/forgetPassword/forgetPassword.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {AuthGuard} from "./auth.guard";
+import {ChangePasswordComponent} from "./components/changePassword/changePassword.component";
+import {CheckMailComponent} from "./components/check-mail/check-mail.component";
 
 const routes: Routes = [
   {
-    path: "login",
-    component: AdminLoginComponent,
-  },
-  {
     path: "register",
     component: RegisterComponent
+  },
+  {
+    path: "login",
+    component: AdminLoginComponent,
   },
   {
     path: "forget-password",
     component: ForgetPasswordComponent
   },
   {
-    path: "users",
-    component: DashboardComponent,
-    canActivate:[AuthGuard]
+    path: "check-your-mail",
+    component: CheckMailComponent
+  },
+  {
+    path: "confirm-password-change",
+    component: ChangePasswordComponent
   },
   {
     path: "",
     component: HomeComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: "users",
+    component: DashboardComponent,
     canActivate:[AuthGuard]
   },
   {

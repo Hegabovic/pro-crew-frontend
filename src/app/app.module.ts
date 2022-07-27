@@ -19,6 +19,7 @@ import { DeleteConfirmDialogComponent } from './components/delete-confirm-dialog
 import {MatDialog} from "@angular/material/dialog";
 import { DialogFormComponent } from './components/dialog-form/dialog-form.component';
 import {AuthInterceptor} from "../interceptors/auth-interceptor";
+import { CheckMailComponent } from './components/check-mail/check-mail.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {AuthInterceptor} from "../interceptors/auth-interceptor";
     NotFoundComponent,
     DeleteConfirmDialogComponent,
     DialogFormComponent,
+    CheckMailComponent,
   ],
   imports: [
     BrowserModule,

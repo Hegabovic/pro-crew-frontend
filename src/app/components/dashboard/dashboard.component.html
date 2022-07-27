@@ -44,9 +44,6 @@
         <th mat-header-cell class="text-center" *matHeaderCellDef> Actions</th>
         <td mat-cell class="text-center" *matCellDef="let element">
           <button class="btn-no-style">
-            <mat-icon matPrefix class="btn-icons-dataTable">remove_red_eye</mat-icon>
-          </button>
-          <button class="btn-no-style">
             <mat-icon matPrefix class="btn-icons-dataTable" (click)="onEdit(element)">edit</mat-icon>
           </button>
           <button class="btn-no-style">

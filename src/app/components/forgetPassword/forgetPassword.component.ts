@@ -11,6 +11,7 @@ import {ResetPasswordService} from "../../../services/ForgetPasswordCycle/reset-
 })
 export class ForgetPasswordComponent implements OnInit {
   data: any = {}
+  messageAlert:string=''
   myForm: FormGroup = new FormGroup({
     email: new FormControl(''),
   });
@@ -31,8 +32,10 @@ export class ForgetPasswordComponent implements OnInit {
     }
 
     this.resetPasswordService.resetPassword(this.data).subscribe((response) => {
-      if (response.status) {
-        this.router.navigate(['/check-mail'])
+      if (response.status){
+        this.router.navigate(['/check-your-mail'])
+      }else{
+        this.messageAlert = '*Please Enter A Valid E-Mail'
       }
     })
   }

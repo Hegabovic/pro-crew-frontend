@@ -43,9 +43,6 @@ export class UsersServicesService {
 
   editUser(id:number,editedUser:any){
     this.editUser_url = this.editUser_url.replace("{id}", id.toString())
-    console.log(editedUser)
-    console.log(id)
-    console.log(this.editUser_url)
     return this.http.put<any>(this.editUser_url,editedUser)
   }
 
